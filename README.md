@@ -45,3 +45,36 @@ These instructions will get you a copy of the project up and running on your loc
     ```bash
     ./mvnw clean install
     ```
+    
+### Running the Application
+
+You can run the Spring Boot application using Maven:
+
+```bash
+./mvnw spring-boot:run
+Running the Web Interface
+To serve the web interface, navigate to the directory containing your index.html file and run:
+
+```bash
+python -m http.server 5500
+```
+The web interface will be accessible at http://localhost:5500.
+---
+Technologies Used
+Backend:
+Spring Boot: Framework for building the Java application.
+Spring Data JPA: For simplified data access and persistence with relational databases.
+Hibernate: JPA implementation.
+PostgreSQL: Relational database.
+Spring Web: For building RESTful APIs.
+Frontend:
+HTML5: For structuring the web content.
+CSS3: For styling the web interface.
+JavaScript: For interactive functionality and API communication.
+Font Awesome: For icons in the web interface.
+Development Tools:
+Spring Tool Suite (STS): For developing the Spring Boot application.
+Visual Studio Code (VS Code): For editing HTML, CSS, and JavaScript files.
+Build Tool:
+Maven: Build automation tool.
+---
