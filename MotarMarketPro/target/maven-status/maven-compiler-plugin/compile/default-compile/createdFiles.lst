@@ -1,0 +1,8 @@
+com\example\MotarMarketPro\entity\SoldVehicleEntity.class
+com\example\MotarMarketPro\package-info.class
+com\example\MotarMarketPro\entity\VehicleEntity.class
+com\example\MotarMarketPro\MotarMarketProApplication.class
+com\example\MotarMarketPro\repository\SoldVehicleRepo.class
+com\example\MotarMarketPro\VehicleRestController.class
+com\example\MotarMarketPro\repository\VehicleRepo.class
+com\example\MotarMarketPro\service\VehicleandsoldVehService.class

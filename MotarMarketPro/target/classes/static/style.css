@@ -1,0 +1,338 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-image: linear-gradient(120deg, #f4f4f4 60%, #e0e7ff 100%), url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+    background-blend-mode: lighten;
+    min-height: 100vh;
+}
+/* Header and logo styles */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(90deg, #007bff 0%, #00c6ff 60%, #6dd5ed 100%);
+    box-shadow: 0 4px 24px rgba(0,123,255,0.10);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    padding-top: 32px;
+    padding-bottom: 12px;
+    margin-bottom: 0;
+}
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.logo-icon {
+    font-size: 2.7rem;
+    background: #fff;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.site-title {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.pro-badge {
+    background: #fff;
+    color: #007bff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    box-shadow: 0 1px 4px rgba(0,123,255,0.10);
+}
+.header-divider {
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #fff 0%, #00c6ff 100%);
+    border-radius: 8px;
+    margin: 18px 0 0 0;
+}
+/* Vibrant header */
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+    letter-spacing: 2px;
+    padding: 36px 0 24px 0;
+    background-image: linear-gradient(90deg, #007bff 0%, #00c6ff 60%, #6dd5ed 100%);
+    box-shadow: 0 4px 24px rgba(0,123,255,0.10);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    transition: background 0.3s;
+}
+section {
+    background: #fff;
+    padding: 32px 24px;
+    margin: 32px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    max-width: 1100px;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+h2 {
+    color: #3a4a5d;
+    margin-bottom: 18px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+form input,
+form select {
+    width: 100%;
+    max-width: 350px;
+    padding: 7px 10px;
+    border: 1px solid #bfc9d9;
+    border-radius: 6px;
+    font-size: 0.97rem;
+    outline: none;
+    background: #fff;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+    box-sizing: border-box;
+    min-width: 100px;
+    height: 36px;
+    margin: 0;
+}
+.form-fields-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+form button {
+    display: block;
+    margin: 18px auto 0 auto;
+    height: 44px;
+    min-width: 180px;
+    max-width: 260px;
+    padding: 0 32px;
+    font-size: 1.08rem;
+    border-radius: 22px;
+    background: linear-gradient(90deg, #00c6ff 0%, #007bff 100%);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.13);
+    border: none;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.1s;
+    align-self: center;
+}
+form button:hover {
+    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+    transform: translateY(-2px) scale(1.06);
+}
+input:focus {
+    border: 1.5px solid #007bff;
+    box-shadow: 0 0 0 2px #b3d4fc;
+}
+select {
+    padding: 10px 14px;
+    border: 1px solid #bfc9d9;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+    box-sizing: border-box;
+    min-width: 120px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select:focus {
+    border: 1.5px solid #007bff;
+    box-shadow: 0 0 0 2px #b3d4fc;
+}
+button {
+    background: linear-gradient(90deg, #007bff 60%, #0056b3 100%);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+    transition: background 0.2s, transform 0.1s;
+}
+button:hover {
+    background: linear-gradient(90deg, #0056b3 60%, #007bff 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+th, td {
+    border: 1px solid #e3e8f0;
+    padding: 10px 8px;
+    text-align: left;
+    font-size: 0.98rem;
+}
+th {
+    background: #007bff;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+tr:nth-child(even) {
+    background: #f1f5fa;
+}
+/* Table row hover effect */
+table tbody tr:hover {
+    background: #e0e7ff;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+/* Footer styles */
+footer {
+    background-image: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1.2em 0 1em 0;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    margin-top: 2em;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+/* About section enhancements */
+#about-section {
+    position: relative;
+    background-image: linear-gradient(120deg, #e0e7ff 60%, #fff 100%), url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+    background-blend-mode: lighten;
+    box-shadow: 0 6px 32px rgba(0,123,255,0.08);
+    border-radius: 18px;
+    margin-bottom: 2.5em;
+    padding: 2.5em 2em 2em 2em;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1.5px solid #e3e8f0;
+    text-align: center;
+}
+.about-icon {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.2rem;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 8px 12px;
+    color: #007bff;
+}
+.about-info-box {
+    background: rgba(255,255,255,0.85);
+    border-left: 5px solid #007bff;
+    border-radius: 10px;
+    padding: 1.2em 1.5em;
+    margin: 1.2em auto 0 auto;
+    max-width: 700px;
+    box-shadow: 0 2px 12px rgba(0,123,255,0.06);
+    font-size: 1.13rem;
+    color: #2d3a4b;
+}
+#about-section h2 {
+    color: #007bff;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+#about-section p {
+    color: #2d3a4b;
+    font-size: 1.13rem;
+    margin-bottom: 0;
+}
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 18px 0 12px 0;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+    }
+    .main-header {
+        padding-top: 18px;
+        padding-bottom: 6px;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+    }
+    .site-title {
+        font-size: 1.2rem;
+    }
+    .logo-icon {
+        font-size: 1.5rem;
+        padding: 4px 7px;
+    }
+    .header-divider {
+        width: 40px;
+        height: 3px;
+    }
+    #about-section {
+        padding: 1.5em 0.5em 1em 0.5em;
+    }
+    .about-info-box {
+        font-size: 0.98rem;
+        padding: 0.8em 0.7em;
+    }
+    .about-icon {
+        font-size: 1.2rem;
+        padding: 4px 6px;
+        top: -18px;
+    }
+    section {
+        padding: 10px 2px;
+        max-width: 99vw;
+    }
+    form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    form button {
+        width: 100%;
+    }
+    table, th, td {
+        font-size: 0.92rem;
+    }
+}
+@media (max-width: 900px) {
+    .form-fields-row {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    form input,
+    form select {
+        max-width: 100%;
+    }
+    form button {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+}

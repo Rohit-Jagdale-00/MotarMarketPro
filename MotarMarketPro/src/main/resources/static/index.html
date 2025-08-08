@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motar Market Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-title">
+            <span class="logo-icon">🚗</span>
+            <span class="site-title">Motar Market <span class="pro-badge">Pro</span></span>
+        </div>
+        <div class="header-divider"></div>
+    </header>
+    <section id="about-section">
+        <div class="about-icon">ℹ️</div>
+        <h2>About Motar Market Pro</h2>
+        <div class="about-info-box">
+            <p>Motar Market Pro is your one-stop solution for managing vehicles and sold vehicle records efficiently. Designed for simplicity and power, it helps you keep track of your vehicle inventory and sales with ease.</p>
+        </div>
+    </section>
+    <section id="vehicle-section">
+        <h2>Vehicle Management</h2>
+        <form id="vehicle-form">
+            <div class="form-fields-row">
+                <input type="hidden" id="vehicle-id">
+                <select id="vehicle-type" required>
+                    <option value="">Type</option>
+                    <option value="Car">Car</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Truck">Truck</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Van">Van</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="vehicle-manufacturer" placeholder="Manufacturer" required>
+                <input type="text" id="vehicle-model" placeholder="Model" required>
+                <select id="vehicle-fuel-type" required>
+                    <option value="">Fuel Type</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="CNG">CNG</option>
+                    <option value="LPG">LPG</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="vehicle-ownership" placeholder="Ownership" required>
+                <input type="text" id="vehicle-reg-data" placeholder="Registration Date" required>
+                <input type="text" id="vehicle-number" placeholder="Vehicle Number" required>
+                <input type="number" id="vehicle-price" placeholder="Price" required>
+            </div>
+            <button type="submit">Add/Update Vehicle</button>
+        </form>
+        <table id="vehicle-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Manufacturer</th>
+                    <th>Model</th>
+                    <th>Fuel Type</th>
+                    <th>Ownership</th>
+                    <th>Reg. Date</th>
+                    <th>Number</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Vehicle rows will be inserted here -->
+            </tbody>
+        </table>
+    </section>
+    <section id="sold-vehicle-section">
+        <h2>Sold Vehicle Management</h2>
+        <form id="sold-vehicle-form">
+            <div class="form-fields-row">
+                <input type="hidden" id="sold-id">
+                <input type="number" id="sold-vehicle-id" placeholder="Vehicle ID" required>
+                <select id="sold-vehicle-type" required>
+                    <option value="">Type</option>
+                    <option value="Car">Car</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Truck">Truck</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Van">Van</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="sold-vehicle-manufacturer" placeholder="Manufacturer" required>
+                <input type="text" id="sold-vehicle-model" placeholder="Model" required>
+                <select id="sold-vehicle-fuel-type" required>
+                    <option value="">Fuel Type</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="CNG">CNG</option>
+                    <option value="LPG">LPG</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="sold-vehicle-ownership" placeholder="Ownership" required>
+                <input type="text" id="sold-vehicle-reg-data" placeholder="Registration Date" required>
+                <input type="text" id="sold-vehicle-number" placeholder="Vehicle Number" required>
+                <input type="number" id="sold-vehicle-price" placeholder="Price" required>
+                <input type="text" id="sold-date" placeholder="Sold Date" required>
+                <input type="text" id="buyer-name" placeholder="Buyer Name" required>
+                <input type="text" id="buyer-contact" placeholder="Buyer Contact" required>
+            </div>
+            <button type="submit">Add Sold Vehicle</button>
+        </form>
+        <table id="sold-vehicle-table">
+            <thead>
+                <tr>
+                    <th>Sold ID</th>
+                    <th>Vehicle ID</th>
+                    <th>Type</th>
+                    <th>Manufacturer</th>
+                    <th>Model</th>
+                    <th>Fuel Type</th>
+                    <th>Ownership</th>
+                    <th>Reg. Date</th>
+                    <th>Number</th>
+                    <th>Price</th>
+                    <th>Sold Date</th>
+                    <th>Buyer Name</th>
+                    <th>Buyer Contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sold vehicle rows will be inserted here -->
+            </tbody>
+        </table>
+    </section>
+    <script src="script.js"></script>
+    <footer>
+        &copy; 2025 Motar Market Pro. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Market Pro - Vehicle Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>Motor Market Pro</h1>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-tab="vehicles">
+                    <i class="fas fa-car"></i> Vehicles
+                </button>
+                <button class="nav-btn" data-tab="sold-vehicles">
+                    <i class="fas fa-check-circle"></i> Sold Vehicles
+                </button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Vehicles Section -->
+            <section id="vehicles" class="tab-content active">
+                <div class="section-header">
+                    <h2><i class="fas fa-car"></i> Vehicle Inventory</h2>
+                    <button class="btn btn-primary" onclick="openAddVehicleModal()">
+                        <i class="fas fa-plus"></i> Add Vehicle
+                    </button>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="vehicleSearch" placeholder="Search vehicles..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <div class="vehicle-grid" id="vehicleGrid">
+                    <!-- Vehicles will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Sold Vehicles Section -->
+            <section id="sold-vehicles" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fas fa-check-circle"></i> Sold Vehicles</h2>
+                    <button class="btn btn-primary" onclick="openAddSoldVehicleModal()">
+                        <i class="fas fa-plus"></i> Add Sold Vehicle
+                    </button>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="soldVehicleSearch" placeholder="Search sold vehicles..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <div class="sold-vehicle-grid" id="soldVehicleGrid">
+                    <!-- Sold vehicles will be loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add Vehicle Modal -->
+    <div id="addVehicleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-car"></i> Add New Vehicle</h3>
+                <span class="close" onclick="closeAddVehicleModal()">&times;</span>
+            </div>
+            <form id="addVehicleForm" class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="vehicleType">Vehicle Type</label>
+                        <input type="text" id="vehicleType" name="vehicle_type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="manufacturer">Manufacturer</label>
+                        <input type="text" id="manufacturer" name="manufacturer" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" id="model" name="model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fuelType">Fuel Type</label>
+                        <select id="fuelType" name="fuel_type" required>
+                            <option value="">Select Fuel Type</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ownership">Ownership</label>
+                        <select id="ownership" name="ownership" required>
+                            <option value="">Select Ownership</option>
+                            <option value="First Owner">First Owner</option>
+                            <option value="Second Owner">Second Owner</option>
+                            <option value="Third Owner">Third Owner</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="regData">Registration Date</label>
+                        <input type="date" id="regData" name="reg_data" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="vehNumber">Vehicle Number</label>
+                        <input type="text" id="vehNumber" name="veh_number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" id="price" name="price" step="0.01" required>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeAddVehicleModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Vehicle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Sold Vehicle Modal -->
+    <div id="addSoldVehicleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-check-circle"></i> Add Sold Vehicle</h3>
+                <span class="close" onclick="closeAddSoldVehicleModal()">&times;</span>
+            </div>
+            <form id="addSoldVehicleForm" class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="soldVehicleId">Vehicle ID</label>
+                        <input type="number" id="soldVehicleId" name="vehicle_id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleTypeSold">Vehicle Type</label>
+                        <input type="text" id="vehicleTypeSold" name="vehicle_type" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="manufacturerSold">Manufacturer</label>
+                        <input type="text" id="manufacturerSold" name="manufacturer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modelSold">Model</label>
+                        <input type="text" id="modelSold" name="model" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fuelTypeSold">Fuel Type</label>
+                        <select id="fuelTypeSold" name="fuel_type" required>
+                            <option value="">Select Fuel Type</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ownershipSold">Ownership</label>
+                        <select id="ownershipSold" name="ownership" required>
+                            <option value="">Select Ownership</option>
+                            <option value="First Owner">First Owner</option>
+                            <option value="Second Owner">Second Owner</option>
+                            <option value="Third Owner">Third Owner</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regDataSold">Registration Date</label>
+                        <input type="date" id="regDataSold" name="reg_data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehNumberSold">Vehicle Number</label>
+                        <input type="text" id="vehNumberSold" name="veh_number" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="priceSold">Price</label>
+                        <input type="number" id="priceSold" name="price" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="soldDate">Sold Date</label>
+                        <input type="date" id="soldDate" name="sold_date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="buyerName">Buyer Name</label>
+                        <input type="text" id="buyerName" name="buyer_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="buyerContact">Buyer Contact</label>
+                        <input type="text" id="buyerContact" name="buyer_contact" required>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeAddSoldVehicleModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Sold Vehicle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Vehicle Modal -->
+    <div id="editVehicleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Edit Vehicle</h3>
+                <span class="close" onclick="closeEditVehicleModal()">&times;</span>
+            </div>
+            <form id="editVehicleForm" class="modal-form">
+                <input type="hidden" id="editVehicleId" name="vehicle_id">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editVehicleType">Vehicle Type</label>
+                        <input type="text" id="editVehicleType" name="vehicle_type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editManufacturer">Manufacturer</label>
+                        <input type="text" id="editManufacturer" name="manufacturer" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editModel">Model</label>
+                        <input type="text" id="editModel" name="model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editFuelType">Fuel Type</label>
+                        <select id="editFuelType" name="fuel_type" required>
+                            <option value="">Select Fuel Type</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editOwnership">Ownership</label>
+                        <select id="editOwnership" name="ownership" required>
+                            <option value="">Select Ownership</option>
+                            <option value="First Owner">First Owner</option>
+                            <option value="Second Owner">Second Owner</option>
+                            <option value="Third Owner">Third Owner</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editRegData">Registration Date</label>
+                        <input type="date" id="editRegData" name="reg_data" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editVehNumber">Vehicle Number</label>
+                        <input type="text" id="editVehNumber" name="veh_number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPrice">Price</label>
+                        <input type="number" id="editPrice" name="price" step="0.01" required>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeEditVehicleModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Update Vehicle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
