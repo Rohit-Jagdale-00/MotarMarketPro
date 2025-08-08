@@ -1,68 +1,47 @@
+# MotarMarketPro
 
----
+MotarMarketPro is a Spring Boot application designed to manage vehicle inventory and sold vehicle records. It provides a RESTful API for performing CRUD (Create, Read, Update, Delete) operations on vehicle and sold vehicle data, along with a simple web interface for interaction.
 
-# Motar Market Pro
+## Table of Contents
 
-Motar Market Pro is a modern web application for managing vehicle inventory and sales records. It provides an intuitive interface for adding, updating, and tracking vehicles and sold vehicles, making it ideal for dealerships or anyone needing to manage vehicle data efficiently.
-
-## Features
-
-- **Vehicle Management:** Add, update, and view vehicles with details like type, manufacturer, model, fuel type, ownership, registration date, number, and price.
-- **Sold Vehicle Management:** Track sold vehicles, including buyer information and sale details.
-- **Modern UI:** Responsive, attractive frontend with dropdowns for type and fuel type, and a clean, user-friendly layout.
-- **Easy Customization:** Built with plain HTML, CSS, and JavaScript for easy modification and integration.
-
-## Project Structure
-
-```
-MotarMarketPro/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/example/MotarMarketPro/...
-│       └── resources/
-│           └── static/
-│               ├── index.html
-│               ├── style.css
-│               └── script.js
-├── pom.xml
-└── ...
-```
+*   [Getting Started](#getting-started)
+    *   [Prerequisites](#prerequisites)
+    *   [Installation](#installation)
+    *   [Running the Application](#running-the-application)
+*   [Project Structure](#project-structure)
+*   [API Endpoints](#api-endpoints)
+*   [Web Interface](#web-interface)
+*   [Technologies Used](#technologies-used)
+*   [Further Reference](#further-reference)
+*   [License](#license)
 
 ## Getting Started
 
-1. **Clone the repository** (if not already):
-   ```sh
-   git clone <your-repo-url>
-   ```
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-2. **Open the project** in your favorite IDE (e.g., Eclipse, IntelliJ).
+### Prerequisites
 
-3. **Run the Spring Boot application**:
-   - Use your IDE’s run configuration, or
-   - From the terminal:
-     ```sh
-     ./mvnw spring-boot:run
-     ```
+*   **Java Development Kit (JDK)**: Version 21 or higher.
+*   **Apache Maven**: Version 3.x or higher.
+*   **PostgreSQL**: A PostgreSQL database instance for data storage.
+*   **Git**: For cloning the repository.
+*   **Spring Tool Suite (STS)**: For developing the Spring Boot application.
+*   **Visual Studio Code (VS Code)**: For editing HTML, CSS, and JavaScript files.
 
-4. **Access the app**:
-   - Open your browser and go to: `http://localhost:8080/`
-   - The main UI is at `src/main/resources/static/index.html`.
+### Installation
 
-## Customization
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository_url>
+    cd MotarMarketPro
+    ```
 
-- **Frontend:** Edit `index.html` and `style.css` in `src/main/resources/static/` for UI changes.
-- **Backend:** Update Java files in `src/main/java/com/example/MotarMarketPro/` for business logic and data handling.
+2.  **Configure the database:**
+    *   Create a PostgreSQL database.
+    *   Update the `src/main/resources/application.properties` file with your PostgreSQL database connection details (e.g., URL, username, password).
+        *   _Note: An `application.properties` file is typically used for Spring Boot database configuration. You'll need to create or modify this file with your specific database credentials._
 
-## Technologies Used
-
-- Java, Spring Boot
-- HTML5, CSS3, JavaScript
-
-## License
-
-This project is for educational and demonstration purposes. You may modify and use it as needed.
-
----
-
-Let me know if you want to add anything specific or need a different format!
+3.  **Build the project:**
+    ```bash
+    ./mvnw clean install
+    ```
