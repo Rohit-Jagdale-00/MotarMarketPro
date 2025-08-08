@@ -1,8 +1,8 @@
 #🚗 MotarMarketPro
-
 MotarMarketPro is a Spring Boot application designed to manage vehicle inventory and sold vehicle records. It provides a RESTful API for performing CRUD (Create, Read, Update, Delete) operations on vehicle and sold vehicle data, along with a simple web interface for interaction.
+
 ---
-##📑 Table of Contents
+#📑 Table of Contents
 ```
 * [Getting Started](#getting-started)
   *⚙️ [Prerequisites](#prerequisites)
