@@ -1,18 +1,18 @@
-# MotarMarketPro
+#🚗 MotarMarketPro
 
 MotarMarketPro is a Spring Boot application designed to manage vehicle inventory and sold vehicle records. It provides a RESTful API for performing CRUD (Create, Read, Update, Delete) operations on vehicle and sold vehicle data, along with a simple web interface for interaction.
 
-## Table of Contents
+##📑 Table of Contents
 
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-  * [Running-the-Application](#running-the-application)
-* [Project Structure](#project-structure)
-* [API Endpoints](#api-endpoints)
-* [Web Interface](#web-interface)
-* [Technologies Used](#technologies-used)
-* [Contact](#contact)
+  *⚙️ [Prerequisites](#prerequisites)
+  *📥 [Installation](#installation)
+  *▶️ [Running-the-Application](#running-the-application)
+*🗂️ [Project Structure](#project-structure)
+*🔌 [API Endpoints](#api-endpoints)
+*🌐 [Web Interface](#web-interface)
+*🧰 [Technologies Used](#technologies-used)
+*📬 [Contact](#contact)
 
 ---
 
@@ -20,7 +20,7 @@ MotarMarketPro is a Spring Boot application designed to manage vehicle inventory
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
+###⚙️ Prerequisites
 
 * **Java Development Kit (JDK)**: Version 21 or higher.
 * **Apache Maven**: Version 3.x or higher.
@@ -31,7 +31,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ---
 
-### Installation
+###📥 Installation
 
 1. **Clone the repository:**
    git clone <repository_url>
@@ -46,14 +46,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ---
 
-### Running the Application
+###▶️ Running the Application
 
 You can run the Spring Boot application using Maven:
    ./mvnw spring-boot:run
 
 ---
 
-### Running the Web Interface
+###▶️ Running the Web Interface
 
 To serve the web interface, navigate to the directory containing your `index.html` file and run:
    python -m http.server 5500
@@ -63,7 +63,7 @@ The web interface will be accessible at:
 
 ---
 
-## Project Structure
+##🗂️ Project Structure
 
 MotarMarketPro/
 ├── src/
@@ -82,7 +82,7 @@ MotarMarketPro/
 
 ---
 
-## API Endpoints
+##🔌 API Endpoints
 
 ### Vehicle Endpoints
 | Method | Endpoint | Description |
@@ -104,7 +104,7 @@ MotarMarketPro/
 
 ---
 
-## Web Interface
+##🌐 Web Interface
 
 The web interface provides a simple and interactive way to manage vehicle inventory and sold vehicle records.
 
@@ -122,7 +122,7 @@ Once the backend is running and the frontend is served via HTTP server, open:
 
 ---
 
-## Technologies Used
+##🧰 Technologies Used
 
 **Backend:**
 - Spring Boot: Framework for building the Java application.
@@ -146,7 +146,7 @@ Once the backend is running and the frontend is served via HTTP server, open:
 
 ---
 
-## Contact
+##📬 Contact
 
 **Name:** Rohit Jagdale  
 **Email:** rohitjagdale0606@gmail.com
