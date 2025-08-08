@@ -29,7 +29,7 @@ MotarMarketPro is a Spring Boot application designed to manage vehicle inventory
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-###⚙️ Prerequisites
+### Prerequisites
 
 * **Java Development Kit (JDK)**: Version 21 or higher.
 * **Apache Maven**: Version 3.x or higher.
