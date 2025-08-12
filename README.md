@@ -84,8 +84,8 @@ MotarMarketPro/
 │   │   │   └── service/         # Business logic and service layer
 │   │   └── resources/
 │   │       ├── application.properties   # Spring Boot configuration
-│   │       └── static/         # Static web files (CSS, JS, images)
-│   │       └── templates/      # HTML templates (if using Thymeleaf)
+│   │       └── static/         # Static web files (Html,CSS, JS)
+│   │       └── templates/      
 │   └── test/                   # Unit and integration tests
 └── pom.xml                     # Maven configuration
 ```
